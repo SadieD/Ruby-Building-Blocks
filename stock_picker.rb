@@ -5,7 +5,7 @@ def stock_picker(prices)
   biggest_gain_index = 0
   
   # Get list of sets of buy,sell,profit
-  for i in (0..prices.size-2)
+  (0..prices.size-2).each do |i|
     temp_set.clear
     temp_set << i
     temp_set << prices.index(prices[i+1..-1].sort.last)
